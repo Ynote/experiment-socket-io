@@ -1,0 +1,27 @@
+<!-- views/index.html -->
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Revealer - Reveal.js multiplexer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="components/reveal.js/css/reveal.min.css">
+        <link rel="stylesheet" href="components/reveal.js/css/theme/default.css" id="theme">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <!-- .slide: data-background="#ffffff" -->
+                    <h1>Title</h1>
+                    <h3>Content</h3>
+                </section>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="components/reveal.js/js/reveal.min.js"></script>
+        <script type="text/javascript">
+            Reveal.initialize({history: true});
+        </script>
+    </body>
+</html>
