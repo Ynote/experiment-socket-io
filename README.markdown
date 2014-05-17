@@ -1,4 +1,43 @@
 # Reveal-js app base
 
 This is a presentation backbone created with [reveal.js](https://github.com/hakimel/reveal.js). It comes with Socket.IO to allow multiple users/devices to control the same presentation.
-Based on this tutorial: http://www.sitepoint.com/create-multi-user-presentation-reveal-js.
+
+## Installation
+Clone the repository and execute:
+```
+$ npm install
+```
+Then, execute:
+```
+$ bower install
+```
+
+## Setup
+Create a `local_conf.json` file to setup your local conf. It must contains a admin login and password:
+```
+{
+    "adminUser" : "your_admin_login",
+    "adminPwd"  : "your_admin_password"
+}
+```
+
+In `public/js/init.js`, change the connection of Socket.IO:
+```
+var socket = io.connect('http://your_localhost');
+```
+
+Run Grunt:
+```
+$ grunt
+```
+
+#### Security
+When a user cannot login as admin, he will be redirected to `views/public.html` instead of `views/admin.html`. The public view has no connection to Socket.IO and so, cannot be controlled.
+
+## Todo
+* Prevent event triggering when one is already fired
+* Create an html partial for slides
+* Remove localhost data from `public/js/init.js` and put it into `local_conf`
+* Add a personal theme to RevealJs
+
+Based on [this tutorial](http://www.sitepoint.com/create-multi-user-presentation-reveal-js)
