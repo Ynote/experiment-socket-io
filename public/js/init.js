@@ -3,6 +3,8 @@ var appBase = (function(mod){
     /***********/
     /* PRIVATE */
     /***********/
+    var socket = io.connect('http://dev.ynote.hk:3000'); // change your localhost url here
+
     function notifyServer(event)
     {
         data =
@@ -30,7 +32,6 @@ var appBase = (function(mod){
     /**********/
     mod.init = function()
     {
-        var socket = io.connect('http://dev.ynote.hk:3000'); // change your localhost url here
         Reveal.initialize({
             history: true
         });
