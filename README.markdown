@@ -1,6 +1,7 @@
 # Reveal-js app base
 
 This is a presentation backbone created with [reveal.js](https://github.com/hakimel/reveal.js). It comes with Socket.IO to allow multiple users/devices to control the same presentation.
+Reveal.js already comes with a plugin for this purpose (multiplex). This is a personal project to learn how to write a Socket.IO server.
 
 ## Installation
 Clone the repository and execute:
@@ -35,7 +36,7 @@ $ grunt
 When a user cannot login as admin, he will be redirected to `views/public.html` instead of `views/admin.html`. The public view has no connection to Socket.IO and so, cannot be controlled.
 
 ## Todo
-* Prevent event triggering when one is already fired
+* Authorize only one master on the admin presentation
 * Create an html partial for slides
 * Remove localhost data from `public/js/init.js` and put it into `local_conf`
 * Add a personal theme to RevealJs
