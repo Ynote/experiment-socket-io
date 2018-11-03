@@ -1,4 +1,8 @@
-# Reveal-js app base
+# Experiment Socket.IO
+
+> Experiment from 2013
+
+This is a small project that intends to test Socket.IO.
 
 This is a presentation backbone created with [reveal.js](https://github.com/hakimel/reveal.js). It comes with Socket.IO to allow multiple users/devices to control the same presentation.
 Reveal.js already comes with a plugin for this purpose (multiplex). This is a personal project to learn how to write a Socket.IO server.
